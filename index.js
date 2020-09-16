@@ -1,7 +1,7 @@
 const express = require( 'express' );
 const app = express();
-const my_client_id = '5da38576975e4705976cf5174775d9a5'
-const redirect_uri = 'http://localhost:3000/callback'
+const my_client_id = '5da38576975e4705976cf5174775d9a5';
+const redirect_uri = 'http://localhost:3000/callback';
 
 app.use( express.static( 'public' ));
 
