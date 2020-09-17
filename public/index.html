@@ -22,6 +22,10 @@
 
     let token = hash.access_token;
 
+    if (!token) {
+      console.log("Not logged in");
+    } else {
+
     window.onSpotifyWebPlaybackSDKReady = () => {
       const player = new Spotify.Player({
         name: 'Web Playback SDK Quick Start Player',
@@ -49,6 +53,7 @@
 
       // Connect to the player!
       player.connect();
+    };
     };
   </script>
 </body>
