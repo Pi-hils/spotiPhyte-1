@@ -4,7 +4,7 @@ const querystring = require( 'querystring' );
 const cookieParser = require( 'cookie-parser' );
 const cors = require( 'cors' );
 const client_id = '5da38576975e4705976cf5174775d9a5';
-const client_secret = 'b5ecc9749ecd485a805412a3a602453d'
+const client_secret = 'f99d6e5f207444aa8567ff73b570a881'
 const redirect_uri = 'http://localhost:3000/callback';
 
 let generateRandomString = function(length) {
@@ -12,7 +12,7 @@ let generateRandomString = function(length) {
   let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
   for (let i = 0; i < length; i++) {
-    text + possible.charAt(Math.floor(Math.random() * possible.length));
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return text;
 };
@@ -22,8 +22,8 @@ let stateKey = 'spotify_auth_state';
 const app = express();
 
 app.use( express.static( 'public' ))
-  .use(cors())
-  .unsubscribe(cookieParser());
+   .use(cors())
+   .use(cookieParser());
 
 app.listen( 3000, function() {
   console.log( 'Listening on port 3000!' );
@@ -51,7 +51,6 @@ app.get( '/login', (req, res) => {
 });
 
 app.get( '/callback', (req, res) => {
-  res.redirect( '/' );
 
   let code = req.query.code || null;
   let state= req.query.state || null;
