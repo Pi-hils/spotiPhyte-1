@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Player</title>
+  <title>spotiPhyte</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <script src="https://sdk.scdn.co/spotify-player.js"></script>
@@ -56,5 +57,35 @@
     };
     };
   </script>
+  <p>
+<button onclick="myMove()">Water Me With Your Song!</button>
+</p>
+
+<div id ="myContainer">
+    <img id="flower" src="https://cdn.pixabay.com/photo/2018/03/04/08/58/flower-3197493_1280.png">
+<div id ="myAnimation"></div>
+</div>
+
+
+
+<script>
+function myMove() {
+  var elem = document.getElementById("myAnimation");
+  var flower = document.getElementById("flower")
+  var pos = 10;
+  var id = setInterval(frame, 20);
+  elem.style.background = 'green'
+  function frame() {
+    if (pos == 320) {
+      clearInterval(id);
+      flower.style.visibility = 'visible'
+    } else {
+      pos++;
+      elem.style.height = pos + 'px';
+      elem.style.width = (10 + pos / 20) + 'px';
+    }
+  }
+}
+</script>
 </body>
 </html>

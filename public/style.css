@@ -1,0 +1,28 @@
+#myContainer {
+  width: 1000px;
+  height: 400px;
+  position: relative;
+  background: lightblue;
+}
+
+#myAnimation {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background: brown;
+  bottom: 0;
+  left: 50%;
+}
+
+body {
+  background-color: lightblue;
+}
+
+#flower {
+  width: 30%;
+  height: 50%;
+  visibility: hidden;
+  left: 36.5%;
+  position: absolute;
+  z-index: 9999
+}
