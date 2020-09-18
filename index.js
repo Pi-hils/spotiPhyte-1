@@ -3,9 +3,15 @@ const request = require( 'request' );
 const querystring = require( 'querystring' );
 const cookieParser = require( 'cookie-parser' );
 const cors = require( 'cors' );
-const client_id = '5da38576975e4705976cf5174775d9a5';
-const client_secret = process.env.CLIENT_SECRET;
-const redirect_uri = 'https://spotiphyte.herokuapp.com/callback';
+const client_id = '1c95e0f4f991455fa23cac015729442f';
+const client_secret = 'ADD HERE';
+const redirect_uri = 'http://localhost:3000/callback';
+const https = require("https");
+const track_id = '5mUxZTSwm1vT2YmKh1v1Ek'
+let tempo = undefined
+
+
+
 
 let generateRandomString = function(length) {
   let text = '';
@@ -59,7 +65,7 @@ app.get( '/callback', (req, res) => {
   let storedState = req.cookies ? req.cookies[stateKey] : null;
 
   if (state === null || state !== storedState) {
-    res.redirect('/#' + 
+    res.redirect('/#' +
       querystring.stringify({
         error: 'state_mismatch'
       }));
@@ -89,10 +95,23 @@ app.get( '/callback', (req, res) => {
           json: true
         };
 
+        let fullUrl = {
+          url: 'https://api.spotify.com/v1/audio-features/'+track_id,
+          headers: { 'Authorization': 'Bearer ' + access_token },
+          json: true
+        }
+
+        request.get(fullUrl, function(error, response, body ) {
+          console.log(body.tempo);
+          let tempo = body.tempo
+          console.log('the tempo is ' + tempo)
+        });
+
+
         request.get(options, function(error, response, body) {
           console.log(body);
         });
-        
+
         res.redirect('/#' +
           querystring.stringify({
             access_token: access_token,
@@ -107,6 +126,7 @@ app.get( '/callback', (req, res) => {
     });
   }
 });
+
 
 app.get('/refresh_token', function(req, res) {
 
@@ -130,4 +150,3 @@ app.get('/refresh_token', function(req, res) {
     }
   });
 });
-
