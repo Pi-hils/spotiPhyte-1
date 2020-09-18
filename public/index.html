@@ -4,22 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>spotiPhyte</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<style>
-#myContainer {
-  margin-left: 50%;
-  width: 50px;
-  height: 400px;
-  position: relative;
-  background: white;
-}
-#myAnimation {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background-color: green;
-  bottom: 0;
-</style>
 <body>
   <script src="https://sdk.scdn.co/spotify-player.js"></script>
   <script>
@@ -76,20 +62,27 @@
 </p>
 
 <div id ="myContainer">
+    <img id="flower" src="https://cdn.pixabay.com/photo/2018/03/04/08/58/flower-3197493_1280.png">
 <div id ="myAnimation"></div>
 </div>
+
+
 
 <script>
 function myMove() {
   var elem = document.getElementById("myAnimation");
-  var pos = 0;
-  var id = setInterval(frame, 200);
+  var flower = document.getElementById("flower")
+  var pos = 10;
+  var id = setInterval(frame, 20);
+  elem.style.background = 'green'
   function frame() {
-    if (pos == 350) {
+    if (pos == 320) {
       clearInterval(id);
+      flower.style.visibility = 'visible'
     } else {
       pos++;
       elem.style.height = pos + 'px';
+      elem.style.width = (10 + pos / 20) + 'px';
     }
   }
 }

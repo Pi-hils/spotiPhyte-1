@@ -1,14 +1,28 @@
 #myContainer {
-  margin-left: 50%;
-  width: 50px;
+  width: 1000px;
   height: 400px;
   position: relative;
-  background: white;
+  background: lightblue;
 }
+
 #myAnimation {
-  width: 50px;
-  height: 50px;
+  width: 10px;
+  height: 10px;
   position: absolute;
-  background-color: green;
+  background: brown;
   bottom: 0;
+  left: 50%;
+}
+
+body {
+  background-color: lightblue;
+}
+
+#flower {
+  width: 30%;
+  height: 50%;
+  visibility: hidden;
+  left: 36.5%;
+  position: absolute;
+  z-index: 9999
 }
