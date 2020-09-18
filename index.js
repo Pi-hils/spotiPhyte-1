@@ -96,22 +96,13 @@ app.get( '/callback', (req, res) => {
         };
 
         let fullUrl = {
-          url: 'https://api.spotify.com/v1/audio-analysis/'+track_id,
+          url: 'https://api.spotify.com/v1/audio-features/'+track_id,
           headers: { 'Authorization': 'Bearer ' + access_token },
           json: true
         }
 
         request.get(fullUrl, function(error, response, body ) {
-          response.setEncoding("utf8");
-          // let body = "";
-          // response.on("data", data => {
-          //   body += data;
-          // });
-          console.log(body);
-          response.on("end", () => {
-            body = JSON.parse(body);
-            console.log(body);
-          });
+          console.log(body.tempo);
         });
 
 
