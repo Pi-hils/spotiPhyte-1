@@ -5,59 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>spotiPhyte</title>
   <link rel="stylesheet" href="style.css">
+  <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+  <script src="https://sdk.scdn.co/spotify-player.js" content="text/javascript"></script>
+  <script src="/scripts.js" content="text/javascript" defer></script>
 </head>
 <body>
-  <script src="https://sdk.scdn.co/spotify-player.js"></script>
-  <script>
-    const hash = window.location.hash
-    .substring(1)
-    .split('&')
-    .reduce(function (initial, item) {
-      if (item) {
-        var parts = item.split('=');
-        initial[parts[0]] = decodeURIComponent(parts[1]);
-      }
-      return initial;
-    }, {});
-    window.location.hash = '';
-
-    let token = hash.access_token;
-
-    if (!token) {
-      console.log("Not logged in");
-    } else {
-
-    window.onSpotifyWebPlaybackSDKReady = () => {
-      const player = new Spotify.Player({
-        name: 'Web Playback SDK Quick Start Player',
-        getOAuthToken: cb => { cb(token); }
-      });
-
-      // Error handling
-      player.addListener('initialization_error', ({ message }) => { console.error(message); });
-      player.addListener('authentication_error', ({ message }) => { console.error(message); });
-      player.addListener('account_error', ({ message }) => { console.error(message); });
-      player.addListener('playback_error', ({ message }) => { console.error(message); });
-
-      // Playback status updates
-      player.addListener('player_state_changed', state => { console.log(state); });
-
-      // Ready
-      player.addListener('ready', ({ device_id }) => {
-        console.log('Ready with Device ID', device_id);
-      });
-
-      // Not Ready
-      player.addListener('not_ready', ({ device_id }) => {
-        console.log('Device ID has gone offline', device_id);
-      });
-
-      // Connect to the player!
-      player.connect();
-    };
-    };
-  </script>
-  <p>
+<h1 id="current-track-name"></h1>
+<p id="current-track-id"></p>
+<p>
 <button onclick="myMove()">Water Me With Your Song!</button>
 </p>
 
