@@ -4,11 +4,11 @@ const querystring = require( 'querystring' );
 const cookieParser = require( 'cookie-parser' );
 const cors = require( 'cors' );
 const client_id = '1c95e0f4f991455fa23cac015729442f';
-const client_secret = '0e4f6b43633f4ad79f6cf6eb8ba3d6e7';
+const client_secret = 'ADD HERE';
 const redirect_uri = 'http://localhost:3000/callback';
 const https = require("https");
 const track_id = '5mUxZTSwm1vT2YmKh1v1Ek'
-const url = 'https://api.spotify.com/v1/audio-analysis/'+track_id
+let tempo = undefined
 
 
 
@@ -103,6 +103,8 @@ app.get( '/callback', (req, res) => {
 
         request.get(fullUrl, function(error, response, body ) {
           console.log(body.tempo);
+          let tempo = body.tempo
+          console.log('the tempo is ' + tempo)
         });
 
 
