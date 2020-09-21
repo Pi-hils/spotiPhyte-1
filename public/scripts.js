@@ -30,6 +30,16 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
   // Playback status updates
   player.addListener('player_state_changed', state => {
+    $.ajax({
+      url: `https://api.spotify.com/v1/audio-features/${state.track_window.current_track.id}`,
+      headers: { Authorization: "Bearer " + token },
+      success: function (response) {
+        $("#feedback").text(response.tempo)
+      },
+      error: function (errorMessage) {
+        $("feedback").text(errorMessage)
+      }
+    });
     console.log(state);
     $('#current-track-name').text(state.track_window.current_track.name);
     $('#current-track-id').text(state.track_window.current_track.id);
