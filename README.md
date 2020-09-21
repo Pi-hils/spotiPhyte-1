@@ -30,8 +30,8 @@ Team SpotiPhyte: <br>
 | Front End |    | 
 | CI/CD |  Travis CI | 
 | Hosting |    Heroku  | 
-| Testing & Coverage | SimpleCov, Rubocop |
-| Tests |  Jest  | 
+| Coverage | Jest |
+| Testinng framework |  Jest  | 
 | Styling |  CSS  | 
 
 
@@ -49,4 +49,8 @@ npm install
 ```
 node index.js
 ```
-- Setup a client id with [spotify developer](https://developer.spotify.com/dashboard/login)
+- God to your local server
+```
+http://localhost:3000/
+```
+_You can setup and input your own client crendentials by visiting [spotify developer](https://developer.spotify.com/dashboard/login)_
