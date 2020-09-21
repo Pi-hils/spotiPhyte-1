@@ -26,11 +26,12 @@ Team SpotiPhyte: <br>
 
 | Area  |    Technology    |
 |----------|:-------------|
-| Languages |  Javascript, Node, Spotify API |
+| Languages |  Javascript, Node, Spotify API, Express |
 | Front End |    | 
 | CI/CD |  Travis CI | 
 | Hosting |    Heroku  | 
 | Testing & Coverage | SimpleCov, Rubocop |
+| Tests |  Jest  | 
 | Styling |  CSS  | 
 
 
@@ -44,7 +45,8 @@ git clone git@github.com:...
 ```
 npm install
 ```
-- Run on your local machine with
+- Run the app on your local machine with:
 ```
 node index.js
 ```
+- Setup a client id with [spotify developer](https://developer.spotify.com/dashboard/login)
