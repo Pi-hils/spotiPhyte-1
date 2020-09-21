@@ -1,3 +1,5 @@
+window.bpm = 1
+
 const hash = window.location.hash
 .substring(1)
 .split('&')
@@ -30,6 +32,19 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
   // Playback status updates
   player.addListener('player_state_changed', state => {
+    $.ajax({
+      url: `https://api.spotify.com/v1/audio-features/${state.track_window.current_track.id}`,
+      headers: { Authorization: "Bearer " + token },
+      success: function (response) {
+        window.bpm = response.tempo;
+        $("#feedback").text(response.tempo);
+        clearTimeout(window.timeout);
+        bpmDance();
+      },
+      error: function (errorMessage) {
+        $("feedback").text(errorMessage)
+      }
+    });
     console.log(state);
     $('#current-track-name').text(state.track_window.current_track.name);
     $('#current-track-id').text(state.track_window.current_track.id);
@@ -49,3 +64,20 @@ window.onSpotifyWebPlaybackSDKReady = () => {
   player.connect();
 };
 };
+
+var image = document.getElementById("image");
+var currentPos = 0;
+var images = ["./images/plant4.png", "./images/plant5.png"]
+
+function plantChange() {
+    if (++currentPos >= images.length)
+        currentPos = 0;
+
+    image.src = images[currentPos];
+}
+
+function bpmDance() {
+  window.interval = (60 / window.bpm * 1000);
+  plantChange();
+  window.timeout = setTimeout(function() { bpmDance(); }, window.interval);
+}
