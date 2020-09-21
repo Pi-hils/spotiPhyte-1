@@ -39,7 +39,9 @@ window.onSpotifyWebPlaybackSDKReady = () => {
         window.bpm = response.tempo;
         $("#feedback").text(response.tempo);
         clearTimeout(window.timeout);
-        bpmDance();
+        if (state.paused === false) {
+          bpmDance();
+        }
       },
       error: function (errorMessage) {
         $("feedback").text(errorMessage)
