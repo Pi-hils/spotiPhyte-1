@@ -34,6 +34,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
       url: `https://api.spotify.com/v1/audio-features/${state.track_window.current_track.id}`,
       headers: { Authorization: "Bearer " + token },
       success: function (response) {
+        window.bpm = response.tempo;
         $("#feedback").text(response.tempo)
       },
       error: function (errorMessage) {
