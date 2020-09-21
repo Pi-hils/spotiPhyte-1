@@ -1,3 +1,5 @@
+window.bpm = 1
+
 const hash = window.location.hash
 .substring(1)
 .split('&')
@@ -30,6 +32,17 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
   // Playback status updates
   player.addListener('player_state_changed', state => {
+    $.ajax({
+      url: `https://api.spotify.com/v1/audio-features/${state.track_window.current_track.id}`,
+      headers: { Authorization: "Bearer " + token },
+      success: function (response) {
+        window.bpm = response.tempo;
+        $("#feedback").text(response.tempo)
+      },
+      error: function (errorMessage) {
+        $("feedback").text(errorMessage)
+      }
+    });
     console.log(state);
     $('#current-track-name').text(state.track_window.current_track.name);
     $('#current-track-id').text(state.track_window.current_track.id);
@@ -49,3 +62,20 @@ window.onSpotifyWebPlaybackSDKReady = () => {
   player.connect();
 };
 };
+
+var image = document.getElementById("image");
+var currentPos = 0;
+var images = ["./images/plant1.jpg", "./images/plant2.jpg", "./images/jake.jpeg"]
+
+function plantChange() {
+    if (++currentPos >= images.length)
+        currentPos = 0;
+
+    image.src = images[currentPos];
+}
+if (window.bpm === 0) {
+  window.interval = 0;
+} else {
+  window.interval = (60 / window.bpm * 1000);
+}
+setInterval(plantChange, window.interval);
