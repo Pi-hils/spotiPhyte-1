@@ -94,28 +94,28 @@ app.get("/callback", (req, res) => {
           json: true,
         };
 
-        let getPlaying = {
-          url: "https://api.spotify.com/v1/me/player/currently-playing",
-          headers: { Authorization: "Bearer " + access_token },
-          json: true,
-        };
-
-        request.get(getPlaying, function (error, response, body) {
-          currentSongId = body.item.id;
-        });
-
-        let getTempo = {
-          url: `https://api.spotify.com/v1/audio-features/${currentSongId}`,
-          headers: { Authorization: "Bearer " + access_token },
-          json: true,
-        };
-
-        console.log(getTempo.url);
-
-        request.get(getTempo, function (error, response, body) {
-          currentTempo = body.tempo;
-          console.log("the tempo is " + currentTempo);
-        });
+        // let getPlaying = {
+        //   url: "https://api.spotify.com/v1/me/player/currently-playing",
+        //   headers: { Authorization: "Bearer " + access_token },
+        //   json: true,
+        // };
+        //
+        // request.get(getPlaying, function (error, response, body) {
+        //   currentSongId = body.item.id;
+        // });
+        //
+        // let getTempo = {
+        //   url: `https://api.spotify.com/v1/audio-features/${currentSongId}`,
+        //   headers: { Authorization: "Bearer " + access_token },
+        //   json: true,
+        // };
+        //
+        // console.log(getTempo.url);
+        //
+        // request.get(getTempo, function (error, response, body) {
+        //   currentTempo = body.tempo;
+        //   console.log("the tempo is " + currentTempo);
+        // });
 
         request.get(options, function (error, response, body) {
           // console.log(body);
