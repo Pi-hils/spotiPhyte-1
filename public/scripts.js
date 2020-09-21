@@ -67,7 +67,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
 var image = document.getElementById("image");
 var currentPos = 0;
-var images = ["./images/plant4.png", "./images/plant5.png"]
+var images = ["../images/plant4.png", "../images/plant5.png"]
 
 function plantChange() {
     if (++currentPos >= images.length)

@@ -4,117 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>spotiPhyte</title>
-  <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="../style.css">
+  <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+  <script src="https://sdk.scdn.co/spotify-player.js" content="text/javascript"></script>
+  <script src="/scripts.js" content="text/javascript" defer></script>
 </head>
 <body>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
-  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-
-
-<script id="user-profile-template" type="text/x-handlebars-template"></script>
-
-
-
-
-
-
-<p>hello, logged in as {{display_name}}</p>
-
-  <script src="https://sdk.scdn.co/spotify-player.js"></script>
-  <script>
-
-  var userProfileSource = document.getElementById('user-profile-template').innerHTML,
-        userProfileTemplate = Handlebars.compile(userProfileSource),
-        userProfilePlaceholder = document.getElementById('user-profile');
-    const hash = window.location.hash
-    .substring(1)
-    .split('&')
-    .reduce(function (initial, item) {
-      if (item) {
-        var parts = item.split('=');
-        initial[parts[0]] = decodeURIComponent(parts[1]);
-      }
-      return initial;
-    }, {});
-    window.location.hash = '';
-
-    let token = hash.access_token;
-
-    if (!token) {
-      console.log("Not logged in");
-    } else {
-
-    window.onSpotifyWebPlaybackSDKReady = () => {
-      const player = new Spotify.Player({
-        name: 'Web Playback SDK Quick Start Player',
-        getOAuthToken: cb => { cb(token); }
-      });
-
-      // Error handling
-      player.addListener('initialization_error', ({ message }) => { console.error(message); });
-      player.addListener('authentication_error', ({ message }) => { console.error(message); });
-      player.addListener('account_error', ({ message }) => { console.error(message); });
-      player.addListener('playback_error', ({ message }) => { console.error(message); });
-
-      // Playback status updates
-      player.addListener('player_state_changed', state => { console.log(state); });
-
-      // Ready
-      player.addListener('ready', ({ device_id }) => {
-        console.log('Ready with Device ID', device_id);
-      });
-
-      // Not Ready
-      player.addListener('not_ready', ({ device_id }) => {
-        console.log('Device ID has gone offline', device_id);
-      });
-
-      // Connect to the player!
-      player.connect();
-    };
-    };
-  </script>
-
-
-  <!-- <script id="oauth-template" type="text/x-handlebars-template">
-    <h2>oAuth info</h2>
-    <dl class="dl-horizontal">
-      <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
-    </dl>
-  </script> -->
-
-
-
-  <p>
-<button onclick="myMove()">Water Me With Your Song! </button>
-</p>
-
-<div id ="myContainer">
-    <img id="flower" src="https://cdn.pixabay.com/photo/2018/03/04/08/58/flower-3197493_1280.png">
-<div id ="myAnimation"></div>
-</div>
-
-
-
-<script>
-function myMove() {
-  var elem = document.getElementById("myAnimation");
-  var flower = document.getElementById("flower")
-  var pos = 10;
-  var id = setInterval(frame, 20);
-  elem.style.background = 'green'
-  function frame() {
-    if (pos == 320) {
-      clearInterval(id);
-      flower.style.visibility = 'visible'
-    } else {
-      pos++;
-      elem.style.height = pos + 'px';
-      elem.style.width = (10 + pos / 20) + 'px';
-    }
-  }
-}
-</script>
+<h1 id="current-track-name"></h1>
+<p id="current-track-id"></p>
+<p id="feedback"></p>
+<img id="image" src="../images/plant4.png">
 </body>
 </html>
