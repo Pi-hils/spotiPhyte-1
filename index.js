@@ -4,7 +4,7 @@ const querystring = require( 'querystring' );
 const cookieParser = require( 'cookie-parser' );
 const cors = require( 'cors' );
 const client_id = '5da38576975e4705976cf5174775d9a5';
-const client_secret = '';
+const client_secret = ''
 const redirect_uri = 'http://localhost:3000/callback';
 
 const https = require("https");
@@ -34,6 +34,10 @@ app.listen(port);
 
 app.get("/", (req, res) => {
   res.sendFile("index.html");
+});
+
+app.get( '/player', ( req, res ) => {
+  res.sendFile(__dirname + '/public/player.html');
 });
 
 app.get("/login", (req, res) => {
@@ -94,35 +98,13 @@ app.get("/callback", (req, res) => {
           json: true,
         };
 
-        // let getPlaying = {
-        //   url: "https://api.spotify.com/v1/me/player/currently-playing",
-        //   headers: { Authorization: "Bearer " + access_token },
-        //   json: true,
-        // };
-        //
-        // request.get(getPlaying, function (error, response, body) {
-        //   currentSongId = body.item.id;
-        // });
-        //
-        // let getTempo = {
-        //   url: `https://api.spotify.com/v1/audio-features/${currentSongId}`,
-        //   headers: { Authorization: "Bearer " + access_token },
-        //   json: true,
-        // };
-        //
-        // console.log(getTempo.url);
-        //
-        // request.get(getTempo, function (error, response, body) {
-        //   currentTempo = body.tempo;
-        //   console.log("the tempo is " + currentTempo);
-        // });
 
         request.get(options, function (error, response, body) {
           // console.log(body);
         });
 
         res.redirect(
-          "/#" +
+          "/player/#" +
             querystring.stringify({
               access_token: access_token,
               refresh_token: refresh_token,
@@ -130,7 +112,7 @@ app.get("/callback", (req, res) => {
         );
       } else {
         res.redirect(
-          "/#" +
+          "player/#" +
             querystring.stringify({
               error: "invalid_token",
             })
