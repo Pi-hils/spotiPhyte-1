@@ -67,17 +67,33 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
 var image = document.getElementById("image");
 var currentPos = 0;
-var images = ["../images/plant4.png", "../images/plant5.png"]
+var images1 = ["../images/plant1.jpg", "../images/plant2.jpg"]
+var images2 = ["../images/plant4.png", "../images/plant5.png"]
 
-function plantChange() {
-    if (++currentPos >= images.length)
+var counter = 0
+
+function plantChange1() {
+    if (++currentPos >= images1.length)
         currentPos = 0;
+        image.src = images1[currentPos];
+        counter ++;
+        console.log(counter)
+      }
 
-    image.src = images[currentPos];
-}
+function plantChange2() {
+      if (++currentPos >= images2.length)
+            currentPos = 0;
+            image.src = images2[currentPos];
+            counter ++;
+            console.log(counter)
+          }
 
 function bpmDance() {
   window.interval = (60 / window.bpm * 1000);
-  plantChange();
+  if (counter < 32) {
+    plantChange1();
+  } else {
+    plantChange2();
+  }
   window.timeout = setTimeout(function() { bpmDance(); }, window.interval);
 }
