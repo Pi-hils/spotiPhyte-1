@@ -69,17 +69,67 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
 var image = document.getElementById("image");
 var currentPos = 0;
-var images = ["../images/plant4.png", "../images/plant5.png"]
+var images1 = ["../images/plant2.png", "../images/plant3.png"]
+var images2 = ["../images/plant4.png", "../images/plant5.png"]
+var images3 = ["../images/plant6.png", "../images/plant7.png"]
+var images4 = ["../images/plant8.png", "../images/plant9.png"]
+var images5 = ["../images/plant10.png", "../images/plant11.png"]
 
-function plantChange() {
-    if (++currentPos >= images.length)
+var counter = 0
+
+function plantChange1() {
+    if (++currentPos >= images1.length)
         currentPos = 0;
+        image.src = images1[currentPos];
+        counter ++;
+        console.log(counter)
+      }
 
-    image.src = images[currentPos];
-}
+function plantChange2() {
+      if (++currentPos >= images2.length)
+            currentPos = 0;
+            image.src = images2[currentPos];
+            counter ++;
+            console.log(counter)
+          }
+
+function plantChange3() {
+      if (++currentPos >= images3.length)
+            currentPos = 0;
+            image.src = images3[currentPos];
+            counter ++;
+            console.log(counter)
+          }
+
+          function plantChange4() {
+                if (++currentPos >= images4.length)
+                      currentPos = 0;
+                      image.src = images4[currentPos];
+                      counter ++;
+                      console.log(counter)
+                    }
+
+                    function plantChange5() {
+                          if (++currentPos >= images5.length)
+                                currentPos = 0;
+                                image.src = images5[currentPos];
+                                counter ++;
+                                console.log(counter)
+                              }
 
 function bpmDance() {
   window.interval = (60 / window.bpm * 1000);
-  plantChange();
+  if (counter < 8) {
+    plantChange1();
+  } else if (counter < 16) {
+    plantChange2();
+  } else if (counter < 24) {
+  plantChange3();
+} else if (counter < 32) {
+plantChange4();
+} else {
+  plantChange5();
+}
+
   window.timeout = setTimeout(function() { bpmDance(); }, window.interval);
 }
