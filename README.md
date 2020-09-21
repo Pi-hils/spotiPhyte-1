@@ -40,4 +40,11 @@ To play this game, you must:<br>
 ```
 git clone git@github.com:...
 ```
-- Run these commands...
+- Install all dependencies with
+```
+npm install
+```
+- Run on your local machine with
+```
+node index.js
+```
