@@ -37,7 +37,9 @@ window.onSpotifyWebPlaybackSDKReady = () => {
       headers: { Authorization: "Bearer " + token },
       success: function (response) {
         window.bpm = response.tempo;
-        $("#feedback").text(response.tempo)
+        $("#feedback").text(response.tempo);
+        clearTimeout(window.timeout);
+        bpmDance();
       },
       error: function (errorMessage) {
         $("feedback").text(errorMessage)
@@ -65,7 +67,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
 var image = document.getElementById("image");
 var currentPos = 0;
-var images = ["./images/plant1.jpg", "./images/plant2.jpg", "./images/jake.jpeg"]
+var images = ["./images/plant4.png", "./images/plant5.png"]
 
 function plantChange() {
     if (++currentPos >= images.length)
@@ -73,9 +75,9 @@ function plantChange() {
 
     image.src = images[currentPos];
 }
-if (window.bpm === 0) {
-  window.interval = 0;
-} else {
+
+function bpmDance() {
   window.interval = (60 / window.bpm * 1000);
+  plantChange();
+  window.timeout = setTimeout(function() { bpmDance(); }, window.interval);
 }
-setInterval(plantChange, window.interval);
