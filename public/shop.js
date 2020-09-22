@@ -15,9 +15,12 @@ function displayGoods() {
 function buy(selection) {
   var i;
   for (i = 0; i < goods.length; i++) {
-    if (goods[i].item === selection && goods[i].price <= gems) {
+    if (selection === goods[i].item ){ 
       gems -= goods[i].price;
-      [selection]();
+      return "item purchased"
+    // (goods[i].item === selection && goods[i].price <= gems) {
+       //gems -= goods[i].price;
+      
     } else {
       return `${selection} is not valid`;
     }
