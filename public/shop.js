@@ -18,7 +18,7 @@ function buy(selection) {
   for (var i = 0; i < goods.length; i++) {
     if(Object.values(goods).includes(selection)){
     // if((goods[i].item.includes(selection))){ 
-   console.log (i) 
+   //console.log (i) 
    gems -= goods[i].price;
       return "item purchased"
     // (goods[i].item === selection && goods[i].price <= gems) {
