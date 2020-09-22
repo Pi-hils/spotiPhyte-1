@@ -6,22 +6,17 @@ let goods = [{
   item: "plant pot",
   price: 2
 },{
-  item: "petels",
+  item: "petals",
   price: 4
 }];
 
 function displayGoods() {
-  // var i;
   goods.forEach(item => console.log(item));
-  // {
-  //   return `${goods[i].item}, price: ${goods[i].price}`
-  // }
-  // console.log(goods)
 }
 
 function buy(selection) {
   for (var i = 0; i < goods.length; i++) {
-    if (selection === goods[i].item ){ 
+    if((goods.item.includes(selection))){ 
    console.log (i) 
    gems -= goods[i].price;
       return "item purchased"
