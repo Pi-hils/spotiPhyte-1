@@ -4,7 +4,7 @@ const querystring = require( 'querystring' );
 const cookieParser = require( 'cookie-parser' );
 const cors = require( 'cors' );
 const client_id = '5da38576975e4705976cf5174775d9a5';
-const client_secret = 'ADD HERE';
+const client_secret = 'f99d6e5f207444aa8567ff73b570a881';
 const redirect_uri = 'http://localhost:3000/callback';
 
 const https = require("https");
