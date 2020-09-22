@@ -82,7 +82,6 @@ function plantChange(array) {
         currentPos = 0;
         image.src = array[currentPos];
         counter ++;
-        console.log(counter)
       }
 
 function bpmDance() {
@@ -105,4 +104,5 @@ function bpmDance() {
 function harvest() {
   gems += Math.floor(counter / 10);
   counter = 0;
+    $('#gems').text(gems);
 }
