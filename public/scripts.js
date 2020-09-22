@@ -74,7 +74,7 @@ var stage2 = ["../images/plant4.png", "../images/plant5.png"]
 var stage3 = ["../images/plant6.png", "../images/plant7.png"]
 var stage4 = ["../images/plant8.png", "../images/plant9.png"]
 var stage5 = ["../images/plant10.png", "../images/plant11.png"]
-
+var gems = 0
 var counter = 0
 
 function plantChange(array) {
@@ -82,7 +82,6 @@ function plantChange(array) {
         currentPos = 0;
         image.src = array[currentPos];
         counter ++;
-        console.log(counter)
       }
 
 function bpmDance() {
@@ -100,4 +99,10 @@ function bpmDance() {
   }
 
   window.timeout = setTimeout(function() { bpmDance(); }, window.interval);
+}
+
+function harvest() {
+  gems += Math.floor(counter / 10);
+  counter = 0;
+    $('#gems').text(gems);
 }
