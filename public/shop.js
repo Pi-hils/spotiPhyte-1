@@ -11,18 +11,19 @@ let goods = [{
 }];
 
 function displayGoods() {
-  var i;
-  for (i = 0; i < goods.length; i++) {
-    return `${goods.item}, price: ${goods.price}`
-  }
-  console.log(goods)
+  // var i;
+  goods.forEach(item => console.log(item));
+  // {
+  //   return `${goods[i].item}, price: ${goods[i].price}`
+  // }
+  // console.log(goods)
 }
 
 function buy(selection) {
-  var i;
-  for (i = 0; i < goods.length; i++) {
+  for (var i = 0; i < goods.length; i++) {
     if (selection === goods[i].item ){ 
-      gems -= goods[i].price;
+   console.log (i) 
+   gems -= goods[i].price;
       return "item purchased"
     // (goods[i].item === selection && goods[i].price <= gems) {
        //gems -= goods[i].price;
