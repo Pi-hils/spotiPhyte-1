@@ -49,7 +49,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
     });
     console.log(state);
     $('#current-track-name').text(state.track_window.current_track.name);
-    $('#current-track-id').text(state.track_window.current_track.id);
+    $('#current-track-artist').text(state.track_window.current_track.artists[0].name);
     });
 
   // Ready
