@@ -1,3 +1,50 @@
 body {
   background-color: lightblue;
 }
+
+
+#flower {
+  width: 30%;
+  height: 50%;
+  visibility: hidden;
+  left: 36.5%;
+  position: absolute;
+  z-index: 9999
+}
+
+#image {
+  margin-top: 10%;
+  width: 600px;
+  height: auto;
+}
+
+#commandline {
+  width: 25%;
+  position: fixed;
+  right: 10%;
+  bottom: 20%;
+  background-color: black;
+}
+
+#commandlog {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  color: white;
+  margin-bottom: 0;
+}
+
+#userinput {
+  position: relative;
+  resize: none;
+}
+
+#space {
+  width:25%;
+  height: 75%;
+  position: absolute;
+  right: 10%;
+  bottom: 20%;
+  background-color: black;
+}
+
+

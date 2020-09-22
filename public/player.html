@@ -11,6 +11,8 @@
       crossorigin="anonymous"></script>
   <script src="https://sdk.scdn.co/spotify-player.js" content="text/javascript"></script>
   <script src="/scripts.js" content="text/javascript" defer></script>
+  <script src="/commandline.js"></script>
+  <script src="/shop.js"></script>
 </head>
 <body>
   <a href="/">LOGOUT</a>
@@ -21,5 +23,13 @@
 <h3>Gems:</h3>
 <p id="gems">0</p>
 <img id="image" src="../images/plant1.png">
+<div id="space"></div>
+<div id="commandline">
+<div id="commandlog"></div>
+<form name="message" action="" id="commandform">
+  <textarea name="userinput" type="text" id="userinput" rows="1" cols="30"></textarea>
+  <br/>
+</form>
+</div>
 </body>
 </html>
