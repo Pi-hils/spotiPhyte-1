@@ -4,7 +4,7 @@ const querystring = require( 'querystring' );
 const cookieParser = require( 'cookie-parser' );
 const cors = require( 'cors' );
 const client_id = '5da38576975e4705976cf5174775d9a5';
-const client_secret = 'f99d6e5f207444aa8567ff73b570a881';
+const client_secret = '';
 const redirect_uri = 'http://localhost:3000/callback';
 
 const https = require("https");
@@ -30,7 +30,9 @@ let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3000;
 }
-app.listen(port);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`)
+});
 
 app.get("/", (req, res) => {
   res.sendFile("index.html");
@@ -39,6 +41,7 @@ app.get("/", (req, res) => {
 app.get( '/player', ( req, res ) => {
   res.sendFile(__dirname + '/public/player.html');
 });
+
 
 app.get("/login", (req, res) => {
   let state = generateRandomString(16);
