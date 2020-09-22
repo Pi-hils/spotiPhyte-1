@@ -42,6 +42,7 @@ app.get( '/player', ( req, res ) => {
   res.sendFile(__dirname + '/public/player.html');
 });
 
+
 app.get("/login", (req, res) => {
   let state = generateRandomString(16);
   res.cookie(stateKey, state);
