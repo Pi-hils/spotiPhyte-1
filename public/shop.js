@@ -16,15 +16,15 @@ function displayGoods() {
 
 function buy(selection) {
   for (var i = 0; i < goods.length; i++) {
-    if(Object.values(goods).includes(selection)){
-    // if((goods[i].item.includes(selection))){ 
-   //console.log (i) 
+    // if(Object.values(goods).includes(selection)){
+    if((goods[i].item.includes(selection))){ 
    gems -= goods[i].price;
       return "item purchased"
-    // (goods[i].item === selection && goods[i].price <= gems) {
-       //gems -= goods[i].price;
-      
-    } else {
+
+    } else if((goods[1].item.includes(selection))){ 
+      gems -= goods[1].price;
+        return "item purchased"
+      } else {
       return `${selection} is not valid`;
     }
   }
