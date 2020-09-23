@@ -13,10 +13,11 @@ function displayGoods() {
 }
 
 function buy(selection) {
-    if (selection in goods) {
+    if (gems >= goods[selection]){
       gems -= goods[selection]
       return `${selection} purchased`
     } else {
-      return `${selection} is not valid`;
+      return 'Insufficient gems'
     }
   }
+
