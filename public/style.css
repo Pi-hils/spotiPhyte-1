@@ -1,6 +1,7 @@
 body {
   font-family: 'Roboto Mono', monospace;
   background-color: lightblue;
+  background-size: cover; 
   background-image: url("./images/spotiphytebgedit.png")
 }
 
