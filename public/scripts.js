@@ -1,4 +1,8 @@
 window.bpm = 1
+window.growthLimit = 3
+window.growthVariable = 10
+window.fertilized = false
+const fullyGrown = 32
 
 const hash = window.location.hash
 .substring(1)
@@ -37,6 +41,10 @@ window.onSpotifyWebPlaybackSDKReady = () => {
       headers: { Authorization: "Bearer " + token },
       success: function (response) {
         window.bpm = response.tempo;
+        window.dance = response.danceability;
+        window.vocals = response.speechiness;
+        window.loudness = response.loudness;
+        window.valence = response.valence;
         $("#feedback").text(response.tempo);
         clearTimeout(window.timeout);
         if (state.paused === false) {
@@ -86,13 +94,13 @@ function plantChange(array) {
 
 function bpmDance() {
   window.interval = (60 / window.bpm * 1000);
-  if (counter < 8) {
+  if (counter < (fullyGrown * 0.2)) {
     plantChange(stage1);
-  } else if (counter < 16) {
+  } else if (counter < (fullyGrown * 0.4)) {
     plantChange(stage2);
-  } else if (counter < 24) {
+  } else if (counter < (fullyGrown * 0.6)) {
     plantChange(stage3);
-  } else if (counter < 32) {
+  } else if (counter < fullyGrown * 0.8) {
     plantChange(stage4);
   } else {
     plantChange(stage5);
@@ -101,11 +109,41 @@ function bpmDance() {
   window.timeout = setTimeout(function() { bpmDance(); }, window.interval);
 }
 
-function harvest() {
-  if (counter < 32) {
-  gems += Math.floor(counter / 10);
+function fertilizer() {
+  if (window.fertilized === true) {
+    window.growthLimit = 7
+    window.growthVariable = 5
   } else {
-    gems += 3
+    window.growthLimit = 3
+    window.growthVariable = 10
+  }
+}
+
+function miracleGro() {
+  counter += 32;
+}
+
+function weedKiller() {
+  counter = 0;
+}
+
+function dancePowder() {
+  let powder = 1
+  powder += -window.dance;
+  let limit = window.growthLimit/powder;
+  window.growthLimit = Math.floor(limit);
+  console.log(window.growthLimit);
+  console.log(window.growthVariable);
+}
+
+function harvest() {
+  if (counter < fullyGrown) {
+  gems += Math.floor(counter / window.growthVariable);
+    console.log(Math.floor(counter / window.growthVariable));
+  } else {
+    gems += window.growthLimit
+    console.log(gems)
+    console.log(window.growthLimit)
   }
   counter = 0;
   $('#gems').text(gems);
