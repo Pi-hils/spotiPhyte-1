@@ -15,6 +15,7 @@ function displayGoods() {
 function buy(selection) {
     if (gems >= goods[selection]){
       gems -= goods[selection]
+      $('#gems').text(gems);
       return `${selection} purchased`
     } else {
       return 'Insufficient gems'
