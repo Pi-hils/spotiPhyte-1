@@ -1,8 +1,9 @@
 let gems = 10 //amount of gems user has
-let goods = {
-  "fertilizer" : 1,
-  "pot" : 2
-};
+
+let goods = [{
+  item: "fertilizer",
+  price: 1
+}];
 
 function displayGoods() {
   var i;
