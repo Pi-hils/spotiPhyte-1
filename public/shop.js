@@ -1,7 +1,8 @@
 let goods = {
   "fertilizer": 1,
-  "plant pot": 2,
-  "petals": 4
+  "plant food": 5,
+  "petals": 7,
+  "watering can": 3
 };
 
 function displayGoods() {
