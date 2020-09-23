@@ -1,6 +1,7 @@
 body {
   font-family: 'Roboto Mono', monospace;
   background-color: lightblue;
+  background-image: url("./images/spotiphytebgedit.png")
 }
 
 
@@ -15,9 +16,9 @@ body {
 
 #image {
   position: fixed;
-  margin-left: 5%;
-  margin-top: 10%;
-  width: 600px;
+  margin-left: 6%;
+  margin-top: 20%;
+  width: 400px;
   height: auto;
 }
 
@@ -58,8 +59,9 @@ body {
 
 #harvest {
   position: fixed;
-  margin-top: 40%;
-  margin-left: 18%;
+  margin-top: 20%;
+  margin-left: 38%;
+  color: white;
 }
 
 #playingtext {
