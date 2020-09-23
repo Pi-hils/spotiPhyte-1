@@ -21,12 +21,16 @@ $(function() {
         $("#commandlog").append("> " + buy("fertilizer") + "<br/>");
         $(this).val("");
         e.preventDefault();
+        window.fertilized = true;
+        fertilizer();
       } else if ($(this).val() == "harvest") {
         harvest()
         $("#commandlog").append($(this).val() + "<br/>");
         $("#commandlog").append("> " + "your plant has been harvested" + "<br/>");
         $(this).val("");
         e.preventDefault();
+        window.fertilized = false;
+        fertilizer();
       } else if ($(this).val() == "help") {
         $("#commandlog").append($(this).val() + "<br/>");
         $("#commandlog").append("> " + "Command List:" + "<br/>" +
