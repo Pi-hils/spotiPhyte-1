@@ -1,16 +1,15 @@
-// let gems = 10 //amount of gems user has
-
-let goods = [{
-  item: "fertilizer",
-  price: 1
-}];
+let goods = {
+  "fertilizer": 1,
+  "plant pot": 2,
+  "petals": 4
+};
 
 function displayGoods() {
-  var i;
-  for (i = 0; i < goods.length; i++) {
-    return `${goods[i].item}, price: ${goods[i].price}`
+  let arrayOfGoods  = [];
+  for (let i=0; i < Object.keys(goods).length; i++ ) {
+    arrayOfGoods.push(`> ${Object.keys(goods)[i]}, price: ${Object.values(goods)[i]}`);
   }
-  console.log(goods)
+  return arrayOfGoods.join("<br/>");
 }
 
 function buy(selection) {

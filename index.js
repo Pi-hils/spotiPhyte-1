@@ -4,7 +4,6 @@ const querystring = require( 'querystring' );
 const cookieParser = require( 'cookie-parser' );
 const cors = require( 'cors' );
 const client_id = '5da38576975e4705976cf5174775d9a5';
-
 const client_secret = 'ADD HERE';
 // const client_secret = process.env.CLIENT_SECRET; UNCOMMENT TO DEPLOY ON HEROKU
 
