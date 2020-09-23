@@ -59,7 +59,12 @@ $(function() {
         "> buy [item_name]: buy item for gems" + "<br/>");
         $(this).val("");
         e.preventDefault();
-      } else {
+      }  else if ($(this).val() == "clear") {
+          $("#commandline").append($(this).val());
+          $("#commandline").append("");
+          $(this).val("");
+          e.preventDefault();
+        } else {
         $("#commandlog").append($(this).val() + "<br/>");
         $("#commandlog").append("> " + "command not recognised" + "<br/>");
         $(this).val("");
@@ -68,3 +73,15 @@ $(function() {
     }
   });
 });
+
+// $(function() {
+//     $("#userinput").keypress(function(e) {
+//       if(e.which == 13) {
+//         if ($(this).val() == "clear") {
+//           $("#space").append($(this).val());
+//           $("#space").append("");
+//           $(this).val("");
+//           e.preventDefault();
+//         }
+//      });
+//   })
