@@ -4,8 +4,8 @@ const querystring = require( 'querystring' );
 const cookieParser = require( 'cookie-parser' );
 const cors = require( 'cors' );
 const client_id = '5da38576975e4705976cf5174775d9a5';
-const client_secret = 'ADD HERE';
-const redirect_uri = 'http://localhost:3000/callback';
+const client_secret = process.env.CLIENT_SECRET;
+const redirect_uri = 'https://spotiphyte.herokuapp.com//callback';
 
 const https = require("https");
 
