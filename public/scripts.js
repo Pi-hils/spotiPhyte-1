@@ -115,6 +115,14 @@ function fertilizer() {
   }
 }
 
+function miracleGro() {
+  counter += 32;
+}
+
+function weedKiller() {
+  counter = 0;
+}
+
 function harvest() {
   if (counter < fullyGrown) {
   gems += Math.floor(counter / window.growthVariable);
