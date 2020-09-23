@@ -4,9 +4,10 @@ const querystring = require( 'querystring' );
 const cookieParser = require( 'cookie-parser' );
 const cors = require( 'cors' );
 const client_id = '5da38576975e4705976cf5174775d9a5';
-const client_secret = process.env.CLIENT_SECRET;
-const redirect_uri = 'https://spotiphyte.herokuapp.com/callback';
-
+// const client_secret = process.env.CLIENT_SECRET; UNCOMMENT TO DEPLOY ON HEROKU
+const client_secret = 'ADD HERE' // DELETE TO DEPLOY ON HEROKU
+// const redirect_uri = 'https://spotiphyte.herokuapp.com/callback'; UNCOMMENT TO DEPLOY ON HEROKU
+const redirect_uri = = 'http://localhost:3000/callback'; // DELETE TO DEPLOY ON HEROKU
 const https = require("https");
 
 let generateRandomString = function (length) {
