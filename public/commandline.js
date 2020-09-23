@@ -53,9 +53,9 @@ $(function() {
           fertilizer();
       } else if ($(this).val() == "help") {
         $("#commandlog").append($(this).val() + "<br/>");
-        $("#commandlog").append("> " + "Command List:" + "<br/>" +
-        "> harvest: collect gems from plant" + "<br/>" +
-        "> shop: displays items for purchase" + "<br/>" +
+        $("#commandlog").append("> " + "-- Command List --" + "<br/>" +
+        "> harvest:         collect gems from plant" + "<br/>" +
+        "> shop:            displays items for purchase" + "<br/>" +
         "> buy [item_name]: buy item for gems" + "<br/>");
         $(this).val("");
         e.preventDefault();
