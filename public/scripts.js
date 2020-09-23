@@ -41,6 +41,10 @@ window.onSpotifyWebPlaybackSDKReady = () => {
       headers: { Authorization: "Bearer " + token },
       success: function (response) {
         window.bpm = response.tempo;
+        window.dance = response.danceability;
+        window.vocals = response.speechiness;
+        window.loudness = response.loudness;
+        window.valence = response.valence;
         $("#feedback").text(response.tempo);
         clearTimeout(window.timeout);
         if (state.paused === false) {
@@ -123,11 +127,23 @@ function weedKiller() {
   counter = 0;
 }
 
+function dancePowder() {
+  let powder = 1
+  powder += -window.dance;
+  let limit = window.growthLimit/powder;
+  window.growthLimit = Math.floor(limit);
+  console.log(window.growthLimit);
+  console.log(window.growthVariable);
+}
+
 function harvest() {
   if (counter < fullyGrown) {
   gems += Math.floor(counter / window.growthVariable);
+    console.log(Math.floor(counter / window.growthVariable));
   } else {
     gems += window.growthLimit
+    console.log(gems)
+    console.log(window.growthLimit)
   }
   counter = 0;
   $('#gems').text(gems);

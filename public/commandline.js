@@ -29,6 +29,12 @@ $(function() {
         $(this).val("");
         e.preventDefault();
         miracleGro();
+      } else if ($(this).val() == "buy dancepowder") {
+        $("#commandlog").append($(this).val() + "<br/>");
+        $("#commandlog").append("> " + buy("dancepowder") + "<br/>");
+        $(this).val("");
+        e.preventDefault();
+        dancePowder();
       } else if ($(this).val() == "harvest") {
         harvest()
         $("#commandlog").append($(this).val() + "<br/>");
