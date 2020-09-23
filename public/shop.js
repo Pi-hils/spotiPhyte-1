@@ -1,7 +1,8 @@
 let goods = {
   "fertilizer": 1,
-  "plant pot": 2,
-  "petals": 4
+  "plant food": 5,
+  "petals": 7,
+  "watering can": 3
 };
 
 function displayGoods() {
@@ -13,10 +14,12 @@ function displayGoods() {
 }
 
 function buy(selection) {
-    if (selection in goods) {
+    if (gems >= goods[selection]){
       gems -= goods[selection]
+      $('#gems').text(gems);
       return `${selection} purchased`
     } else {
-      return `${selection} is not valid`;
+      return 'Insufficient gems'
     }
   }
+

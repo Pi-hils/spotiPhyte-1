@@ -21,6 +21,11 @@ $(function() {
         $("#commandlog").append("> " + buy("fertilizer") + "<br/>");
         $(this).val("");
         e.preventDefault();
+      } else if ($(this).val() == "buy watering can") {
+        $("#commandlog").append($(this).val() + "<br/>");
+        $("#commandlog").append("> " + buy("watering can") + "<br/>");
+        $(this).val("");
+        e.preventDefault();
       } else if ($(this).val() == "harvest") {
         harvest()
         $("#commandlog").append($(this).val() + "<br/>");
