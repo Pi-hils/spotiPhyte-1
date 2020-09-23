@@ -21,6 +21,13 @@ $(function() {
         $("#commandlog").append("> " + buy("fertilizer") + "<br/>");
         $(this).val("");
         e.preventDefault();
+      } else if ($(this).val() == "help") {
+        $("#commandlog").append($(this).val() + "<br/>");
+        $("#commandlog").append("> " + "Command List:" + "<br/>" + 
+        "> shop: displays items for purchase" + "<br/>" +
+        "> buy [item_name]: buy item for gems" + "<br/>");
+        $(this).val("");
+        e.preventDefault();
       } else {
         $("#commandlog").append($(this).val() + "<br/>");
         $("#commandlog").append("> " + "command not recognised" + "<br/>");
