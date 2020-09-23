@@ -1,5 +1,3 @@
-let gems = 10 //amount of gems user has
-
 let goods = {
   "fertilizer": 1,
   "plant pot": 2,
