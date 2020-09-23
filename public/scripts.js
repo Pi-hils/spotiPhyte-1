@@ -102,7 +102,11 @@ function bpmDance() {
 }
 
 function harvest() {
+  if (counter < 32) {
   gems += Math.floor(counter / 10);
+  } else {
+    gems += 3
+  }
   counter = 0;
-    $('#gems').text(gems);
+  $('#gems').text(gems);
 }
