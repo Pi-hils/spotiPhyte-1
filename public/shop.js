@@ -8,9 +8,8 @@ let goods = {
 
 function displayGoods() {
   let arrayOfGoods  = [];
-  console.log(Object.keys(goods));
   for (let i=0; i < Object.keys(goods).length; i++ ) {
-    arrayOfGoods.push(`${Object.keys(goods)[i]}, price: ${Object.values(goods)[i]}`);
+    arrayOfGoods.push(`> ${Object.keys(goods)[i]}, price: ${Object.values(goods)[i]}`);
   }
   return arrayOfGoods.join("<br/>");
 }
