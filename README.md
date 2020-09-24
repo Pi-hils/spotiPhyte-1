@@ -31,10 +31,8 @@ For a detailed account of how the agile working environment and sprints involved
  - Plant Sprite
  - Interactivity with plant Sprite
  - Get a basic layout of web
-<br>
 
 ## Planning 
-
 <u><strong>Initial Planning</strong></u>
 <br>
 
