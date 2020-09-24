@@ -5,10 +5,10 @@ const cookieParser = require( 'cookie-parser' );
 const cors = require( 'cors' );
 const client_id = '5da38576975e4705976cf5174775d9a5';
 const client_secret = 'f99d6e5f207444aa8567ff73b570a881'; // UNCOMMENT TO DEPLOY LOCALLY
-//const client_secret = process.env.CLIENT_SECRET; // UNCOMMENT TO DEPLOY ON HEROKU
+// const client_secret = process.env.CLIENT_SECRET; // UNCOMMENT TO DEPLOY ON HEROKU
 
   const redirect_uri = 'http://localhost:3000/callback'; // UNCOMMENT TO DEPLOY LOCALLY
-//const redirect_uri = 'https://spotiphyte.herokuapp.com/callback'; // UNCOMMENT TO DEPLOY ON HEROKU
+// const redirect_uri = 'https://spotiphyte.herokuapp.com/callback'; // UNCOMMENT TO DEPLOY ON HEROKU
 
 const https = require("https");
 
