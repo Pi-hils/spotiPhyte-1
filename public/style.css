@@ -5,6 +5,9 @@ body {
   background-image: url("./images/spotiphytebgedit.png")
 }
 
+#trial a {
+  text-align: center;
+}
 
 #flower {
   width: 30%;
