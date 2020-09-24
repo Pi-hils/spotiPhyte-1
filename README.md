@@ -1,7 +1,7 @@
 # spotiphyte()
 Welcome to spotiPhyte! 
 
-[![Image from Gyazo](https://i.gyazo.com/218e9afacdd68d657640f4e9cdb4d401.png=50x50)](https://gyazo.com/218e9afacdd68d657640f4e9cdb4d401)
+[![Image from Gyazo](https://i.gyazo.com/218e9afacdd68d657640f4e9cdb4d401.png=10x10)](https://gyazo.com/218e9afacdd68d657640f4e9cdb4d401)
 (https://spotiphyte.herokuapp.com/)
 
 ## What is spotiPhyte
