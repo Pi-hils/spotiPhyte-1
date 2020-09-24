@@ -54,12 +54,12 @@ $(function() {
       } else if ($(this).val() == "help") {
         $("#commandlog").append($(this).val() + "<br/>");
         $("#commandlog").append("> " + "-- Command List --" + "<br/>" +
-        "> harvest:         collect gems from plant" + "<br/>" +
-        "> shop:            displays items for purchase" + "<br/>" +
+        "> harvest: collect gems from plant" + "<br/>" +
+        "> shop: displays items for purchase" + "<br/>" +
         "> buy [item_name]: buy item for gems" + "<br/>");
         $(this).val("");
         e.preventDefault();
-      } else {
+        } else {
         $("#commandlog").append($(this).val() + "<br/>");
         $("#commandlog").append("> " + "command not recognised" + "<br/>");
         $(this).val("");

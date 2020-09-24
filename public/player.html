@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>spotiPhyte</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">  
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="../style.css">
@@ -17,7 +18,9 @@
   <script src="/shop.js"></script>
 </head>
 <body>
+  <div id='trial'>
   <a href="/">LOGOUT</a>
+</div>
 <div id="nowplaying">
   <div id="playingtext">
   <h1 id="current-track-name"></h1>
@@ -30,12 +33,14 @@
 <span id="gems">0</span>
 </div>
 <img id="image" src="../images/plant1.png">
-<div id="space"></div>
+<div id="space">
 <div id="commandline">
-<div id="commandlog"></div>
+<div id="commandlog">
 <form name="message" action="" id="commandform">
-  <textarea name="userinput" type="text" id="userinput" placeholder="hint: type help to get started..." rows="1" cols="42"></textarea>
-  <br/>
+  <textarea name="userinput" type="text" id="userinput" placeholder="hint: type help to get started..." rows="1" cols="42" reset="clear()"></textarea>
+</div>
+</div>
+ <br/>
 </form>
 </div>
 </body>
