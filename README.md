@@ -1,10 +1,7 @@
 # spotiphyte()
 Welcome to spotiPhyte. Enjoy the app [here](https://spotiphyte.herokuapp.com/)!
-
 <br>
-
 <img align="center" margin-left="50px" alt="logo" width="182px" height="152" src="https://i.gyazo.com/218e9afacdd68d657640f4e9cdb4d401.png=50x50">
-<br>
 <br>
 
 ## What is spotiPhyte
@@ -15,10 +12,10 @@ Why not acquire useful items to speedup the growth of your plant by visiting the
 
 
 ## How it works
-(video snippet of final work)
+(video snippet /screenshot of final work)
 
 
-Team SpotiPhyte: <br>
+## Team SpotiPhyte: <br>
 [Ralph Mallett](https://github.com/ralphm10)<br>
 [Hilda Amponsah](https://github.com/Pi-hils)<br>
 [Jake Cummings](https://github.com/SilverLongjohns)<br>
@@ -35,13 +32,11 @@ For a detailed account of how the agile working environment and sprints involved
  - Interactivity with plant Sprite
  - Get a basic layout of web
 <br>
-<br>
 
 ## Planning 
 
 <u><strong>Initial Planning</strong></u>
 <br>
-
 
 [![Image from Gyazo](https://i.gyazo.com/9d680cf991b8f7c6607243d03bf26947.png)](https://gyazo.com/9d680cf991b8f7c6607243d03bf26947)
 
@@ -82,6 +77,11 @@ node index.js
 ```
 http://localhost:3000/
 ```
+- To run test
+```
+npm test
+```
+
 - You can setup and input your own client crendentials by visiting [spotify developer](https://developer.spotify.com/dashboard/login). <br>
 - On your spotify developer, click <strong>Edit Setting</strong> and change your redirect to http://localhost:3000.<br>
 - Once you have the credentials, paste the client_id and client_secret next to the correct variable in script.js
