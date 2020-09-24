@@ -1,8 +1,8 @@
 window.bpm = 1;
 window.growthLimit = 3;
-window.growthVariable = 200;
+window.growthVariable = 200; //10
 window.fertilized = false;
-const fullyGrown = 640;
+const fullyGrown = 640; //32
 const hash = window.location.hash
 .substring(1)
 .split('&')
@@ -111,15 +111,15 @@ function bpmDance() {
 function fertilizer() {
   if (window.fertilized === true) {
     window.growthLimit = 7
-    window.growthVariable = 100
+    window.growthVariable = 100 //5
   } else {
     window.growthLimit = 3
-    window.growthVariable = 200
+    window.growthVariable = 200 //10
   }
 }
 
 function miracleGro() {
-  counter += 480;
+  counter += 480; //32
 }
 
 function weedKiller() {
