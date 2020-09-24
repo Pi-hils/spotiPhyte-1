@@ -1,8 +1,11 @@
 # spotiphyte()
-Welcome to spotiPhyte! 
+Welcome to spotiPhyte. Enjoy the app [here](https://spotiphyte.herokuapp.com/)!
 
-[![Image from Gyazo](https://i.gyazo.com/218e9afacdd68d657640f4e9cdb4d401.png=50x50)](https://gyazo.com/218e9afacdd68d657640f4e9cdb4d401)
-(https://spotiphyte.herokuapp.com/)
+<br>
+
+<img align="center" margin-left="50px" alt="logo" width="182px" height="152" src="https://i.gyazo.com/218e9afacdd68d657640f4e9cdb4d401.png=50x50">
+<br>
+<br>
 
 ## What is spotiPhyte
 This is an <strong>entertaining and therapeutic game</strong> which allows you to play your own choice of music from your spotify account. Whilst the music is playing, watch a beautiful, green plant dance to the beat of your song. To get to the optimal growth of the plant, play a few songs and watch it transform to the rhythm of the beat. 
@@ -10,7 +13,6 @@ This is an <strong>entertaining and therapeutic game</strong> which allows you t
 <br>
 Why not acquire useful items to speedup the growth of your plant by visiting the shop? To accumulate gems, harvest your plant when you see it growing. To gain more points, let your plant bloom before harvesting.	🌻
 
-#link to the wiki and team charter
 
 ## How it works
 (video snippet of final work)
@@ -23,6 +25,8 @@ Team SpotiPhyte: <br>
 [Alexis Simonian](https://github.com/Alexisimonian)<br>
 [Paul Humphreys](https://github.com/phump81)<br>
 
+For a detailed account of how the agile working environment and sprints involved in creating this project, please visit our [sprints](https://github.com/SilverLongjohns/spotiPhyte/wiki) and the [team charter](https://github.com/SilverLongjohns/spotiPhyte/blob/master/team_charter.md). <br>
+
 - [Trello](https://trello.com/b/JJHYRzFI/finalproject2020)
 
 ## MVP
@@ -30,8 +34,21 @@ Team SpotiPhyte: <br>
  - Plant Sprite
  - Interactivity with plant Sprite
  - Get a basic layout of web
+<br>
+<br>
+
+## Planning 
+
+<u><strong>Initial Planning</strong></u>
+<br>
+
 
 [![Image from Gyazo](https://i.gyazo.com/9d680cf991b8f7c6607243d03bf26947.png)](https://gyazo.com/9d680cf991b8f7c6607243d03bf26947)
+
+<u><strong> Miro Planning</strong></u>
+<br>
+
+[![Image from Gyazo](https://i.gyazo.com/d5778c662213a6eeaeb60fb853371bbf.png)](https://gyazo.com/d5778c662213a6eeaeb60fb853371bbf)
 
 ## Technologies
 
