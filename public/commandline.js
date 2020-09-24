@@ -22,19 +22,25 @@ $(function() {
         $(this).val("");
         e.preventDefault();
         window.fertilized = true;
-        fertilizer();
+        if (gems >= goods["fertilizer"]){
+          fertilizer();
+        }
       } else if ($(this).val() == "buy miracleGro") {
         $("#commandlog").append($(this).val() + "<br/>");
         $("#commandlog").append("> " + buy("miracleGro") + "<br/>");
         $(this).val("");
         e.preventDefault();
-        miracleGro();
+        if (gems >= goods["miracleGro"]){
+          miracleGro();
+        }
       } else if ($(this).val() == "buy dancepowder") {
         $("#commandlog").append($(this).val() + "<br/>");
         $("#commandlog").append("> " + buy("dancepowder") + "<br/>");
         $(this).val("");
         e.preventDefault();
-        dancePowder();
+        if (gems >= goods["dancepowder"]){
+          dancePowder();
+        }
       } else if ($(this).val() == "harvest") {
         harvest()
         $("#commandlog").append($(this).val() + "<br/>");
@@ -44,7 +50,9 @@ $(function() {
         window.fertilized = false;
         fertilizer();
       } else if ($(this).val() == "buy weedkiller") {
-          weedKiller();
+          if (gems >= goods["weedkiller"]){
+            weedKiller();
+          }
           $("#commandlog").append($(this).val() + "<br/>");
           $("#commandlog").append("> " + "your plant has been killed :(" + "<br/>");
           $(this).val("");
