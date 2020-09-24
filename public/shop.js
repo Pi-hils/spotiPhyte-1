@@ -23,7 +23,3 @@ function buy(selection) {
     }
   }
 
-  function clear() {
-    $('form[name="message"]').userinput();
-    $('textarea[type="text"], textarea').val('');
-    }
