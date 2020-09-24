@@ -83,3 +83,16 @@ body {
   position: relative;
   resize: none;
 }
+
+/* #welcome-cover {
+  background-color: black;
+  background-size: auto;
+  color: white;
+  height: 100%;
+  text-align: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 5px;
+} */
+
