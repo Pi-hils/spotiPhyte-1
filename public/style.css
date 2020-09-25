@@ -1,7 +1,7 @@
 body {
   font-family: 'Roboto Mono', monospace;
   background-color: lightblue;
-  background-size: stretch; 
+  background-size: cover; 
   background-image: url("./images/logoontablet.png")
 }
 
