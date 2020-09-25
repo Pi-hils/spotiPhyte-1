@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.com/SilverLongjohns/spotiPhyte.svg?branch=master)](https://travis-ci.com/SilverLongjohns/spotiPhyte)
 <br> 
 Welcome to spotiPhyte. Enjoy the app [here](https://spotiphyte.herokuapp.com/)!
+
 <br>
 <img align="center" margin-left="50px" alt="logo" width="182px" height="152" src="https://i.gyazo.com/218e9afacdd68d657640f4e9cdb4d401.png=50x50">
 <br>
