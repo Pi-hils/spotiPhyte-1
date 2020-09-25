@@ -12,6 +12,8 @@ Why not acquire useful items to speedup the growth of your plant by visiting the
 
 
 ## How it works
+[Check out the game](https://drive.google.com/file/d/1hT5LIN7-z8IEAKjaXbtwqmnDPzZvPeQX/view?usp=sharing)
+
 The webapp
 
 [![Image from Gyazo](https://i.gyazo.com/6d8d3c92f1a61f8c12371e603c658df4.png)](https://gyazo.com/6d8d3c92f1a61f8c12371e603c658df4)
