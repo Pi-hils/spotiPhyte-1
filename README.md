@@ -3,7 +3,6 @@
 <br> 
 Welcome to spotiPhyte. Enjoy the app [here](https://spotiphyte.herokuapp.com/)!
 <br>
-
 <img align="center" margin-left="50px" alt="logo" width="182px" height="152" src="https://i.gyazo.com/218e9afacdd68d657640f4e9cdb4d401.png=50x50">
 <br>
 
@@ -30,7 +29,7 @@ Why not acquire useful items to speedup the growth of your plant by visiting the
 [![Image from Gyazo](https://i.gyazo.com/626357c4703e9dced32d2b1f07f226f8.png)](https://gyazo.com/626357c4703e9dced32d2b1f07f226f8)
 
 
-## Team SpotiPhyte: <br>
+## Team spotiPhyte: <br>
 [Ralph Mallett](https://github.com/ralphm10)<br>
 [Hilda Amponsah](https://github.com/Pi-hils)<br>
 [Jake Cummings](https://github.com/SilverLongjohns)<br>
