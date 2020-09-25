@@ -23,7 +23,7 @@ if (!token) {
 
 window.onSpotifyWebPlaybackSDKReady = () => {
   const player = new Spotify.Player({
-    name: 'Web Playback SDK Quick Start Player',
+    name: 'spotiPhyte',
     getOAuthToken: cb => { cb(token); }
   });
 
