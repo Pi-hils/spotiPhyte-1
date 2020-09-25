@@ -1,4 +1,6 @@
-# spotiphyte()
+# spotiPhyte
+[![Build Status](https://travis-ci.com/SilverLongjohns/spotiPhyte.svg?branch=master)](https://travis-ci.com/SilverLongjohns/spotiPhyte)
+<br> 
 Welcome to spotiPhyte. Enjoy the app [here](https://spotiphyte.herokuapp.com/)!
 <br>
 
@@ -15,15 +17,15 @@ Why not acquire useful items to speedup the growth of your plant by visiting the
 ## How it works
 [Check out the game](https://drive.google.com/file/d/1hT5LIN7-z8IEAKjaXbtwqmnDPzZvPeQX/view?usp=sharing)
 
-The webapp
+### The webapp
 
 [![Image from Gyazo](https://i.gyazo.com/6d8d3c92f1a61f8c12371e603c658df4.png)](https://gyazo.com/6d8d3c92f1a61f8c12371e603c658df4)
 
-Your song
+### Your song
 
 [![Image from Gyazo](https://i.gyazo.com/e088d8c9414e1e240219e4db2bb0abf3.png)](https://gyazo.com/e088d8c9414e1e240219e4db2bb0abf3)
 
-The shop
+### The shop
 
 [![Image from Gyazo](https://i.gyazo.com/626357c4703e9dced32d2b1f07f226f8.png)](https://gyazo.com/626357c4703e9dced32d2b1f07f226f8)
 
@@ -94,5 +96,5 @@ npm test
 ```
 
 - You can setup and input your own client crendentials by visiting [spotify developer](https://developer.spotify.com/dashboard/login). <br>
-- On your spotify developer, click <strong>Edit Setting</strong> and change your redirect to http://localhost:3000.<br>
+- On your spotify developer, click <strong>Edit Setting</strong> and change your redirect to http://localhost:3000/callback <br>
 - Once you have the credentials, paste the client_id and client_secret next to the correct variable in script.js
