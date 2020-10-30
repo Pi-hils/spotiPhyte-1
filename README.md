@@ -1,9 +1,12 @@
 # spotiphyte()
-Welcome to spotiPhyte. Enjoy the app [here](https://spotiphyte.herokuapp.com/)!
+Welcome to spotiPhyte. Enjoy the app [here](ttps://spotiphyte.herokuapp.com/)!
 <br>
 
-<img align="center" margin-left="50px" alt="logo" width="182px" height="152" src="https://i.gyazo.com/218e9afacdd68d657640f4e9cdb4d401.png=50x50">
+<img align="center" margin-left="50px" alt="logo" width="182px" height="152" src="./public/images/logo.png">
 <br>
+<br>
+
+Listen to the presentation [here](https://www.youtube.com/watch?v=fmWeT5R_0PY).
 
 ## What is spotiPhyte
 This is an <strong>entertaining and therapeutic game</strong> which allows you to play your own choice of music from your spotify account. Whilst the music is playing, watch a beautiful, green plant dance to the beat of your song. To get to the optimal growth of the plant, play a few songs and watch it transform to the rhythm of the beat. 
