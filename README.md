@@ -1,5 +1,5 @@
 # spotiphyte()
-Welcome to spotiPhyte. Enjoy the app [here](ttps://spotiphyte.herokuapp.com/)!
+Welcome to spotiPhyte. Enjoy the app [here](https://spotiphyte.herokuapp.com/)!
 <br>
 
 <img align="center" margin-left="50px" alt="logo" width="182px" height="152" src="./public/images/logo.png">
@@ -8,11 +8,29 @@ Welcome to spotiPhyte. Enjoy the app [here](ttps://spotiphyte.herokuapp.com/)!
 
 Listen to the presentation [here](https://www.youtube.com/watch?v=fmWeT5R_0PY).
 
+## Topics covered
+<ul>
+  <li><a href="#whatisspotiPhyte?">What is spotiPhyte?</a></li> 
+  <li><a href="#connectingyourspotifytothegame">Connecting your spotify to the game</a></li> 
+  <li><a href="#how%it%works">How it work</a></li> 
+  <li><a href="#team">Team</a></li> 
+  <li><a href="#mvp">MVP</a></li> 
+  <li><a href="#planning">Planning</a></li> 
+  <li><a href="#technologies">Technologies</a></li> 
+  <li><a href="#installing locally">Installing locally</a></li> 
+</ul>
+
 ## What is spotiPhyte
 This is an <strong>entertaining and therapeutic game</strong> which allows you to play your own choice of music from your spotify account. Whilst the music is playing, watch a beautiful, green plant dance to the beat of your song. To get to the optimal growth of the plant, play a few songs and watch it transform to the rhythm of the beat. 
 <br>
 <br>
 Why not acquire useful items to speedup the growth of your plant by visiting the shop? To accumulate gems, harvest your plant when you see it growing. To gain more points, let your plant bloom before harvesting.	🌻
+
+## Connecting your spotify to the game
+Click login and give permission to spotify to by inserting in your credentials.\
+In your own spotify account(on your phone/website), go to: \
+Settings -> Device(Connect to a device) -> spotiphyte \
+(Ensure you are logged inside the game).
 
 
 ## How it works
@@ -31,7 +49,7 @@ The shop
 [![Image from Gyazo](https://i.gyazo.com/626357c4703e9dced32d2b1f07f226f8.png)](https://gyazo.com/626357c4703e9dced32d2b1f07f226f8)
 
 
-## Team SpotiPhyte: <br>
+## Team
 [Ralph Mallett](https://github.com/ralphm10)<br>
 [Hilda Amponsah](https://github.com/Pi-hils)<br>
 [Jake Cummings](https://github.com/SilverLongjohns)<br>
