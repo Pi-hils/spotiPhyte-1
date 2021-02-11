@@ -54,3 +54,5 @@ Magic person
 Writes minutes of the standups
 Write minutes from Retro
 Include Scrum Master of the day
+
+
