@@ -9,5 +9,10 @@ describe('testing shop', () => {
     data['two'] = 2;
     expect(data).toEqual({one: 1, two: 2});
   });
+
+  test('buy fertilizerfrom the shop', () => {
+    const data = {fertilizer: 1};
+    expect(data).toEqual({fertilizer: 1});
+  });
 });
 
