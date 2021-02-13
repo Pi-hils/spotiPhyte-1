@@ -10,9 +10,31 @@ describe('testing shop', () => {
     expect(data).toEqual({one: 1, two: 2});
   });
 
-  test('buy fertilizerfrom the shop', () => {
+  test('buy fertilizer from the shop', () => {
     const data = {fertilizer: 1};
     expect(data).toEqual({fertilizer: 1});
   });
 });
 
+describe('items inside shhop', () =>{
+  test('buy fertilizer from the shop', () => {
+  const items = ['fertilizer','dancepowder','weedkiller','miracleGro'];
+   expect (items).toEqual(['fertilizer','dancepowder','weedkiller','miracleGro']);
+  });
+
+  test('buy fertilizer from the shop', () => {
+    const items = ['fertilizer','dancepowder','weedkiller','miracleGro'];
+    // expect("a string").toContain("a")
+    expect (items).toContain('fertilizer');
+    });
+
+    test('buy fertilizer from the shop', () => {
+      const items = ['fertilizer','dancepowder','weedkiller','miracleGro'];
+      expect (items).toContain('dancepowder');
+      });
+
+      test('buy fertilizer from the shop', () => {
+        const items = ['fertilizer','dancepowder','weedkiller','miracleGro'];
+        expect (items).toContain('weedkiller');
+        });
+});
